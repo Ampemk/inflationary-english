@@ -45,10 +45,6 @@ class Inflate {
 
             //inflatable key array loop
             foreach($keys as $inflat){
-                //check to see if part of value is in key
-                $find = strpos(strtolower($value), $inflat); //find if key is in word
-                //if it is 
-                if(isset($find)){
                     
                     //to inflate
                     $inflated = $this->inflate($inflat);
@@ -59,7 +55,6 @@ class Inflate {
                         $words[$key]=$newvalue;
                     }
 
-                }
                 
                            
             }
