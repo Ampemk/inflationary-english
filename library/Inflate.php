@@ -1,5 +1,6 @@
 <?php
 
+namespace inflationary\lib;
 /**
  * This class takes a string and turns it into inflationary english
  *
@@ -61,9 +62,9 @@ class Inflate {
                             
         }
         
-        //turn array values into keys seperated by a space
+        //turn array values into strings seperated by a space
         $inflatedsentence = implode(" ", $words);
-        return $inflatedsentence;
+        return ucfirst($inflatedsentence); //capitalize first character
                 
 
         
@@ -83,7 +84,7 @@ class Inflate {
         //increase value.
         $value=$value+1;
 
-        $f = new NumberFormatter("en", NumberFormatter::SPELLOUT);
+        $f = new \NumberFormatter("en", \NumberFormatter::SPELLOUT);
         return $f->format($value);
 
         
