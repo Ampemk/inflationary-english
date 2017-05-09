@@ -74,7 +74,7 @@
 
                 $.ajax({
                     type: 'POST', // use POST method
-                    url: '/main.php', // post to main.php
+                    url: 'app/main.php', // post to main.php
                     data: formData, // input data
                     dataType: 'json', // returns json
                     encode: true
