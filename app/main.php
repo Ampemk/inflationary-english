@@ -1,11 +1,14 @@
 <?php
 
+namespace inflationary\lib;
+
+error_reporting(E_ALL);
+ini_set('display_errors', 1);
 /*
  * Calls Inflate class to perform 
  * return json to index for display
  */
-include("library/Inflate.php");
-
+include("../library/Inflate.php");
 //check for POST method
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
@@ -13,7 +16,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
     //if sentence is not empty.
     if (!empty($sentence)) {
-        $inflate = new Inflate; //instantiate object inflate
+        $inflate = new Inflate(); //instantiate object inflate
         $inflated = $inflate->searchInflatable($sentence);
 
         //json encode array
